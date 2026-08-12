@@ -1,0 +1,8 @@
+# config.yaml
+# Default configuration for the Books.toscrape.com scraper
+
+base_url: "https://books.toscrape.com/"
+delay: 1.0
+retries: 3
+max_workers: 5
+output: "data.csv"

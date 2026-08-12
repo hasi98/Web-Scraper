@@ -1,0 +1,27 @@
+name: "Quotes ToScrape"
+start_url: "https://quotes.toscrape.com/page/1/"
+
+# Pagination logic
+pagination:
+  next_button_selector: "li.next a"
+  url_attribute: "href"
+
+# The CSS selector that wraps a single item
+item_container_selector: "div.quote"
+
+fetch_detail_page: false
+
+# Fields to extract
+fields:
+  text:
+    selector: "span.text"
+    attribute: "text"
+    type: "string"
+  author:
+    selector: "small.author"
+    attribute: "text"
+    type: "string"
+  tags:
+    selector: "div.tags meta.keywords"
+    attribute: "content"
+    type: "string"

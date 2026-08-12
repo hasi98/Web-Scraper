@@ -1,0 +1,43 @@
+name: "Books ToScrape"
+start_url: "https://books.toscrape.com/catalogue/page-1.html"
+
+# Pagination logic
+pagination:
+  next_button_selector: "li.next a"
+  url_attribute: "href"
+
+# The CSS selector that wraps a single item in the list
+item_container_selector: "article.product_pod"
+
+# Detail page crawling
+# If true, the scraper will visit the link found in the detail_url field
+# to fetch additional fields not present on the list page.
+fetch_detail_page: true
+detail_link_selector: "h3 a"
+detail_link_attribute: "href"
+
+# Fields to extract
+fields:
+  title:
+    selector: "h3 a"
+    attribute: "title"
+    type: "string"
+  price:
+    selector: "p.price_color"
+    attribute: "text"
+    type: "string"
+  rating:
+    selector: "p.star-rating"
+    attribute: "class"
+    type: "string"
+  availability:
+    selector: "p.instock.availability"
+    attribute: "text"
+    type: "string"
+    
+# Fields only found on the detail page (deep crawl)
+detail_fields:
+  category:
+    selector: "ul.breadcrumb li:nth-child(3) a"
+    attribute: "text"
+    type: "string"

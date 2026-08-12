@@ -1,0 +1,26 @@
+name: "eBay Laptops (Dynamic)"
+start_url: "https://www.ebay.com/b/Laptops-Netbooks/175672/bn_1648276"
+
+# Pagination
+pagination:
+  next_button_selector: "a.pagination__next"
+  url_attribute: "href"
+
+# Item container (Updated from user screenshot)
+item_container_selector: "li.brwrvr__item-card"
+fetch_detail_page: false
+
+# Fields to extract
+fields:
+  title:
+    selector: "span.bsig__title"
+    attribute: "text"
+    type: "string"
+  price:
+    selector: "span.bsig__price"
+    attribute: "text"
+    type: "string"
+  item_url:
+    selector: "span.bsig__title a"
+    attribute: "href"
+    type: "string"

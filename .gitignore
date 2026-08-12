@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.scrape_state_*.json
+scratch/
+data.csv
+errors.csv
+*.db
+.vscode/
