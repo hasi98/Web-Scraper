@@ -1,5 +1,6 @@
 # Universal Web Scraper (Playwright Edition)
 
+![GUI Screenshot](screenshot/python_7xijr9K3ZS.png)
 An advanced, configuration-driven Python web scraper utilizing Playwright to extract data from modern, JavaScript-heavy websites like eBay.
 
 ## What it does
